@@ -1,0 +1,57 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red11\green76\blue180;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c1961\c38824\c75686;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Resource: {\field{\*\fldinst{HYPERLINK "https://twarc-project.readthedocs.io/en/latest/twarc2_en_us/"}}{\fldrslt 
+\f1\b0 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 https://twarc-project.readthedocs.io/en/latest/twarc2_en_us/}}
+\f1\b0 \cf3 \expnd0\expndtw0\kerning0
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf3 \
+\
+
+\f0\b Practice Queries:
+\f1\b0 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf3 twarc2 search --limit 10 results.jsonl\
+\'a0\
+twarc2 search --start-time 2019-01-01 --end-time 2020-03-15 \
+\'a0\
+twarc2 search --archive\
+\'a0\
+twarc2 search --counts-only\
+\'a0\
+twarc2 search --type [geo] --place-fields \'9347.6600,-122.4172\'94 --json results.jsonl\
+\'a0\
+--flatten\
+--counts-only\
+--no-context-annotations\
+--minimal-fields\
+--metadata / --no-metadata\
+\'a0\
+\'a0\
+\'a0\
+twarc2 search "seattle" --archive\'a0 --start-time 2021-01-01T12:31:04 --end-time 2021-01-01T15:20:03 --limit 10\
+\'a0\
+twarc2 search "place:seattle" --archive\'a0 --start-time 2021-01-01T12:31:04 --end-time 2021-01-01T15:20:03 --limit 10\
+\'a0\
+twarc2 search "point_radius:[-122.4172 47.660 3km]" --archive\'a0 --start-time 2021-01-01T12:31:04 --end-time 2021-01-01T15:20:03 --limit 10\
+\'a0\
+twarc2 search "point_radius:[-122.4172 47.660 3km]" --archive\'a0 --limit 10\'a0 input.jsonl\'a0 \
+\'a0\
+twarc2 flatten input.json output.json\
+twarc2 flatten input.jsonl output.jsonl\
+\'a0\
+\'a0\
+\'a0\
+twarc2 search "point_radius:[-73.96651 40.78121 5.16mi]" --archive\'a0 --limit 10\'a0 input.jsonl\
+twarc2 search "point_radius:[-73.96651 40.78121 5.16mi]" --archive --max-results 10\'a0 --limit 10 --minimal-fields\'a0 input.jsonl\
+\'a0\
+twarc2 csv input.jsonl tweets.csv\
+\'a0\
+twarc2 search "point_radius:[-73.96651 40.78121 5.16mi]" --archive\'a0 --start-time 2021-01-01T12:31:04 --end-time 2021-01-01T15:20:03 input.jsonl}
